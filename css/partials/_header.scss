@@ -28,6 +28,49 @@ i {
   }
 }
 
+.header-button{
+  border: 0.0625rem solid $white-normal;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  color: $white-normal;
+  transition: background 0.3s;
+
+  &:hover{
+    border: 0.0625rem solid $red-light;
+    background: $red-light;
+  }
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.875rem;
+}
+
+
+@media screen and (max-width: 48rem){
+  .header-content{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i{
+      margin-top: 1rem;
+      font-size: 2.125rem;
+    }
+  }
+
+  .header-logo img{
+    width: 10rem;
+    margin-top: 2.875rem;
+  }
+
+  .header-button{
+    display: none;
+  }
+}
 
 @keyframes translateY{
   from{
