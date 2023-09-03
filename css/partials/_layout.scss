@@ -11,7 +11,8 @@
     content: "";
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../../assets/bg.svg");
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
+      url("../../assets/bg.svg");
     left: 0;
     top: 0;
     width: 100%;
@@ -24,7 +25,7 @@
   }
 }
 
-.hero{
+.hero {
   color: $white-normal;
   height: 80vh;
   display: flex;
@@ -32,21 +33,21 @@
   align-items: center;
   justify-content: center;
   padding: 0.875rem;
-  
-  h1{
+
+  h1 {
     text-align: center;
     line-height: 150%;
     max-width: 58.75rem;
     font-size: 3rem;
   }
 
-  p{
+  p {
     text-align: center;
     margin: 0.875rem 0;
   }
 }
 
-.button-contact{
+.button-contact {
   padding: 0.875rem 1.75rem;
   color: $white-normal;
   background: $red-normal;
@@ -55,33 +56,73 @@
   font-weight: 600;
   margin: 0.875rem 0;
   border-radius: 0.3125rem;
-  
-  &:hover{
+
+  &:hover {
     animation: scaleButton 0.8s alternate infinite;
   }
 }
 
-@keyframes scaleButton{
-  from{
+@keyframes scaleButton {
+  from {
     transform: scale(1);
   }
-  to{
+  to {
     transform: scale(1.07);
   }
 }
 
-@media screen and (max-width: 48rem){
-  .hero{
+@media screen and (max-width: 48rem) {
+  .hero {
     min-height: 60vh;
 
-    h1{
+    h1 {
       font-size: 2.125rem;
       padding: 0 0.875rem;
       width: 100%;
     }
 
-    p{
+    p {
       font-size: 0.875rem;
     }
+  }
+}
+
+.about{
+  background: $primary-normal;
+  overflow: hidden;
+  color: $white-normal;
+}
+
+.about-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  padding: 2.125rem 0.875rem 4rem 0.875rem;
+
+  div{
+    flex: 1;
+  }
+
+  img{
+    max-width: 35.625rem;
+  }
+}
+
+.about-description{
+    h2{
+      font-size: 2.375rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p{
+      margin-bottom: 0.875rem;
+      line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 48rem){
+  .about-content{
+    flex-direction: column;
   }
 }
