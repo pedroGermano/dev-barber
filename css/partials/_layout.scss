@@ -87,42 +87,122 @@
   }
 }
 
-.about{
+.about {
   background: $primary-normal;
   overflow: hidden;
   color: $white-normal;
 }
 
-.about-content{
+.about-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.875rem;
   padding: 2.125rem 0.875rem 4rem 0.875rem;
 
-  div{
+  div {
     flex: 1;
   }
 
-  img{
+  img {
     max-width: 35.625rem;
   }
 }
 
-.about-description{
-    h2{
-      font-size: 2.375rem;
-      margin-bottom: 1.5rem;
-    }
+.about-description {
+  h2 {
+    font-size: 2.375rem;
+    margin-bottom: 1.5rem;
+  }
 
-    p{
+  p {
+    margin-bottom: 0.875rem;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+.services {
+  background: $white-normal;
+  color: $black-normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.375rem 0.875rem;
+
+  .services-content {
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2.375rem;
       margin-bottom: 0.875rem;
-      line-height: 150%;
     }
+    p {
+      line-height: 150%;
+      margin-bottom: 0.875rem;
+      text-align: center;
+      max-width: 48.75rem;
+    }
+  }
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2.75rem 2.125rem 2.75rem;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: $white-normal;
+  border-radius: 0.5rem;
+  box-shadow: 0px -1px 15px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-width: 21.875rem;
+    transition: transform 0.25s;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+}
+
+
+.haircut-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.875rem;
+  background: $white-normal;
+  z-index: 1;
+
+  button{
+    background: $red-dark;
+    color: $white-normal;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    cursor: default;
+  }
 }
 
 @media screen and (max-width: 48rem){
-  .about-content{
+  .haircuts{
     flex-direction: column;
   }
 }
